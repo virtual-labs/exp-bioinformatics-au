@@ -1,13 +1,200 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+    <style>
+        label
+        {
+            background-color: #a8336c;
+            color: white;
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 200px;
+            margin-left: 200px;
+            width: 200px;
+            height: 50px;
+            border-radius:10px;
+            position:relative;
+            cursor:pointer;
+            line-height:120px;
+        }
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+        div.at-container {
+            display: flex;
+        }
+
+        .at-item {
+            color:rgb(181,3,70); font-weight:bold; font-size:45px;;
+            justify-content: center;
+            text-decoration-color:rgb(181,3,70);  
+            position: relative;
+            align-items: center;
+            margin-left: 5%;
+            margin-top: 1%;
+        }
+
+        .collapsible {
+            background-color:white;
+            color: #a8336c;
+            cursor: pointer;
+            padding: 18px;
+            width: 90%;
+            border-color:#a8336c;
+            border-width: 1px;
+            text-align: left;
+            border-radius:10px;
+            outline: none;
+            font-size: 20px;
+            font-weight:bold;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        input[type=button]{
+            width: 20%;
+            background-color: #671834;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .collapsible:hover {
+            background-color:#a8336c;
+            color: white;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: #a8336c;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: white;
+            border: black;
+            color: black;
+            font-size: 18px;    
+        }
+
+        .right{
+            float: left;
+            margin-left: 100px;
+            color:  black ;
+            font-size: 20px;    
+        }
+
+        hr {
+            position: relative;
+            top: 20px;
+            border: none;
+            height: 2px;
+            background: #d737a5;
+            margin-bottom: 50px;
+        }
+
+    </style>
+
+    <head>    
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body style="background-color:white">
+        <div class='at-container'>
+            <img src="images/logo.png"width="300" height="100" style="margin-left:2%;">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class='at-item' >Basic Algorithms in Bioinformatics </div>
+        </div>
+        <br><br><br><br><br><br>
+        <button class=collapsible>Pairwise Sequence Alignment</button>
+        <div class=content>
+            <div class="right">
+                <p><input type=radio id=ps1 name=ps1 value=ps1>Brute Force Comparison 
+                    <br> 
+                    <input type=radio id=ps2 name=ps2 value=ps2>Dot plot
+                    <br>
+                    <input type=radio id=ps3 name=ps3 value=ps3>Needleman-Wunsch
+                    <br>    
+                </p>
+            </div>
+        </div>
+
+        <button class=collapsible>Multiple Sequence Alignment</button>
+        <div class=content> 
+            <div class="right">
+                <p>
+                    <input type=radio id=ms1 name=ms1 value=ms1>Progressive Algorithms
+                    <br>  
+                </p>
+            </div>
+        </div>
+
+        <button class=collapsible>Construction of Phylogenetic tree</button>
+        <div class=content>
+            <div class="right">
+                <p>
+                    <input type=radio id=cp1 name=cp1 value=cp1>Fitch Margoliash Algorithm
+                    <br> 
+                    <input type=radio id=cp3 name=cp3 value=cp3>Neighbor Joining
+                    <br>
+                </p>
+            </div>
+        </div>
+        <p>
+            <input type="button" style="margin-left:5%;" value="Submit" onclick=myFunction()>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <a href="index.html">
+            <input type="button" id=Reset value="Reset">
+            </a>
+            <p id="demo"></p>
+        </p>
+        <hr>
+
+        <script>
+           var coll = document.getElementsByClassName("collapsible");
+                var i;
+                for (i = 0; i < coll.length; i++) 
+                {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                    });
+                }
+            
+            function myFunction()
+            {
+                if(document.getElementById('ps1').checked){
+                    //alert("this is ps1");
+                    window.open("BruteForce.html");
+                }
+                else if(document.getElementById('ps2').checked){
+                    window.open("Dotplot_new.html");
+                }
+                else if(document.getElementById('ps3').checked){
+                    window.open("Needleman_new.html");
+                }
+                else{
+                    alert("Sorry! The algorithms would be updated soon")
+                }
+            }
+        </script>
+    </body>
 </html>
