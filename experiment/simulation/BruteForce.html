@@ -101,7 +101,7 @@
                 <a href="monkey.txt" download="sample_fasta.txt">Download a Sample FASTA file to compare</a>
                 <br><br>
                 <input type="button" style="margin-left:5%;font-weight: bold;" value="Compare" onclick="bfc()" >
-                <a href="basic_algorithm.html">
+                <a href="index.html">
                     <input type="button" id=Back value="Back">
                 </a>
             </div>
@@ -163,10 +163,10 @@
             document.getElementById("demo").innerHTML =("<h1 style=\"color:rgb(181,3,70)\"> Results</h1>"+"\n");
             //document.getElementById("demo").innerHTML = dna1;
             if(dna1==dna2){
-                document.getElementById("result").innerHTML= "The DNA sequences are perfectly match\n";
+                document.getElementById("result").innerHTML= "<h1 style=\"color:rgb(0,200,20)\" \"font-size:24px\"><b>The DNA sequences are a perfect match\n";
             }
             else{
-                document.getElementById("result").innerHTML= "The DNA sequences are not perfectly match\n";
+                document.getElementById("result").innerHTML= "<h1 style=\"color:rgb(200,0,0)\" \"font-size:24px\"><b>The DNA sequences does not match\n";
             }
         }
     </script>
