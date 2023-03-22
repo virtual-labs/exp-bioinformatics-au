@@ -17,7 +17,7 @@
       "answers": {
         "a": "True",
         "b": "False"
-      }
+      },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -28,7 +28,7 @@
         "b": "check",
         "c": "visualise",
         "d": "none of the above"
-      }
+      },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -37,7 +37,7 @@
       "answers": {
         "a": "True",
         "b": "False"
-      }
+      },
       "correctAnswer": "b",
       "difficulty": "beginner"
     }
