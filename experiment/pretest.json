@@ -19,7 +19,7 @@
         "b": "global",
         "c": "both",
         "d": "none of the above"
-      }
+      },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
@@ -30,7 +30,7 @@
         "b": "check",
         "c": "visualise",
         "d": "none of the above"
-      }
+      },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -41,7 +41,7 @@
         "b": "second",
         "c": "third",
         "d": "fourth"
-      }
+      },
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
