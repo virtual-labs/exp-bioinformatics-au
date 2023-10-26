@@ -6,9 +6,10 @@ The concept of an algorithm becomes more relevant with the precise use of variab
 ## Theory
 An algorithm is defined as a set of sequential instructions that one must perform for solving a well-formulated problem. Considering a Protein or a nucleotide sequence, it is important to find the similarity matches for predicting the functional role, features and structural aspects. Sequence alignment generally describes the comparison of sequence with several methods for sequence analysis in a better way. The accuracy of sequence alignment determines the subsequent analyses for phylogeny prediction, genomics studies and structure and function prediction and for identifying conserved regions. In biological research, sequence analysis helps in drug discovery process, pathogen detection and identification of common genes. The basic algorithm in bioinformatics employs techniques for efficiently finding optimal alignments. 
 
-In Pairwise Sequence Alignment the similarity regions are identified for mapping functions, structure and evolutionary relationships between two biological sequences of interest. There are different algorithms associated with pairwise sequence alignment like the Brute Force algorithm, Dotplot, Needlemann Wunsch algorithm, Smith Watermann algorithm etc..  
 
-### Methods of Pairwise Sequence Alignment
+### Algorithms for Pairwise Sequence Alignment
+
+In Pairwise Sequence Alignment the similarity regions are identified for mapping functions, structure and evolutionary relationships between two biological sequences of interest. There are different algorithms associated with pairwise sequence alignment like the Brute Force algorithm, Dotplot, Needlemann Wunsch algorithm, Smith Watermann algorithm etc.. 
 
 #### Brute Force Comparison
 Brute Force Comparison refers to the simplest string comparison algorithm. It is applicable to check whether two equal-length sequences are identical or not. In Brute force comparison, alignments are done without gaps and produce N^2 complexity. N represents the length of the sequence. In biological sequence alignment, brute force comparison involves all possible alignment of the given sequence for computing a similarity score and identifies the alignment having the highest score. The scoring system has specific scores or penalties for matching pairs, mismatches, and gaps (insertions or deletions). The alignment scores evaluate the similarity or dissimilarity between two biological sequences. The highest score indicates the given sequence has higher similarity. Brute force algorithm is the straightforward approach for solving a problem that included direct computation and problem statement based on concepts. Brute force approach can also be called as exhaustive search for solving small size instance of problem. It is important for both educational and theoretical purposes. The implementation of Brute force algorithm is the simplest approach, and it can be only applied to problems with smaller input size.
@@ -23,7 +24,8 @@ The Needleman-Wunsch algorithm is a dynamic programming method that breaks down 
 
 1.	Initialization
 The initial matrix is created with m+1 columns and n+1 rows (where m and n correspond to the length of the sequences). Extra rows and columns are given to align with a gap at the start of the matrix. For more details see https://vlab.amrita.edu/?sub=3&brch=274&sim=1431&cnt=1 
-
+  <img src="images/T1.JPG" title="" />
+  <br>
  
 Fig.1. Initialization of matrix in Needleman-Wunsch algorithm
 
@@ -31,15 +33,24 @@ Fig.1. Initialization of matrix in Needleman-Wunsch algorithm
 2.	Matrix filling (score calculation)
 The first row and first column of the matrix represents gap penalties. From the second row, calculate the score for each cell in the matrix. The score is determined by match, mismatch, insertion, and deletion in the given sequence. Gap penalties are represented by negative values that represents a score deduction for introducing a gap. A score for each cell depends on scores of the neighboring cells and provides substitution score of the corresponding sequences. 
  
+
+  <img src="images/T2.JPG" title="" />
+  <br>
 Fig.2. Matrix filling in Needleman-Wunsch algorithm.
 
 
 3.	Traceback
 After filling the entire matrix, the optimal alignment can be obtained by backtracking from the bottom-right cell (corresponding to the end of both sequences) to the top-left cell (corresponding to the beginning of both sequences). 
- 
+
+
+   <img src="images/T3.JPG" title="" />
+  <br>
+  
 Fig.3. Traceback in Needleman-Wunsch algorithm
 The best alignment can be identified by using the maximum alignment score which may be user defined.
 
-Multiple Sequence Alignment (MSA) represents the alignment of three or more biological sequences of similar length. It is useful in molecular biology to study evolutionary relationships and there exists many algorithms for studying the sequence alignment. Scoring scheme in algorithm represent a set of rules that assigns the alignment score to any given alignment of two sequences. A gap in the matrix corresponds to an insertion or a deletion of a biological residue. The Needleman-Wunsch algorithm is an example of dynamic programming. It is appropriate for finding alignment of sequences of similar length. 
+### Algorithms for Multiple Sequence Alignment
 
+
+Multiple Sequence Alignment (MSA) represents the alignment of three or more biological sequences of similar length. It is useful in molecular biology to study evolutionary relationships and there exists many algorithms for studying the sequence alignment. Scoring scheme in algorithm represent a set of rules that assigns the alignment score to any given alignment of two sequences. A gap in the matrix corresponds to an insertion or a deletion of a biological residue. Progressive alignment is one of the algorithms that is used for most of the tools For e.g. CLUSTAlW
 
