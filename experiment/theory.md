@@ -56,7 +56,7 @@ Multiple Sequence Alignment (MSA) represents the alignment of three or more biol
 
 ### Algorithms for Pylogenetic tree construction
 
-Phylogentic tree helps us to study the evolutionary relationships and there exists many algorithms and tools for constructing trees. Algorithms like Margoliasch-Fitch algorithm, Neighbor joining, UPGMA can be used. These algorithms are used in tools like Phylip, ggTree, Figtree etc.
+Phylogentic tree helps us to study the evolutionary relationships and there exists many algorithms and tools for constructing trees. Algorithms like Margoliasch-Fitch algorithm, Neighbor joining, UPGMA can be used. These algorithms are used in tools like Phylip, ggTree, Figtree etc..
 
 
 
