@@ -24,7 +24,7 @@ The Needleman-Wunsch algorithm is a dynamic programming method that breaks down 
 
 1.	Initialization
 The initial matrix is created with m+1 columns and n+1 rows (where m and n correspond to the length of the sequences). Extra rows and columns are given to align with a gap at the start of the matrix. For more details see https://vlab.amrita.edu/?sub=3&brch=274&sim=1431&cnt=1 
-  <img src="images/T1.JPG" title="" />
+  <img src="images/T1.jpg" title="" />
   <br>
  
 Fig.1. Initialization of matrix in Needleman-Wunsch algorithm
@@ -34,7 +34,7 @@ Fig.1. Initialization of matrix in Needleman-Wunsch algorithm
 The first row and first column of the matrix represents gap penalties. From the second row, calculate the score for each cell in the matrix. The score is determined by match, mismatch, insertion, and deletion in the given sequence. Gap penalties are represented by negative values that represents a score deduction for introducing a gap. A score for each cell depends on scores of the neighboring cells and provides substitution score of the corresponding sequences. 
  
 
-  <img src="images/T2.JPG" title="" />
+  <img src="images/T2.jpg" title="" />
   <br>
 Fig.2. Matrix filling in Needleman-Wunsch algorithm.
 
@@ -43,7 +43,7 @@ Fig.2. Matrix filling in Needleman-Wunsch algorithm.
 After filling the entire matrix, the optimal alignment can be obtained by backtracking from the bottom-right cell (corresponding to the end of both sequences) to the top-left cell (corresponding to the beginning of both sequences). 
 
 
-   <img src="images/T3.JPG" title="" />
+   <img src="images/T3.jpg" title="" />
   <br>
   
 Fig.3. Traceback in Needleman-Wunsch algorithm
@@ -52,5 +52,11 @@ The best alignment can be identified by using the maximum alignment score which 
 ### Algorithms for Multiple Sequence Alignment
 
 
-Multiple Sequence Alignment (MSA) represents the alignment of three or more biological sequences of similar length. It is useful in molecular biology to study evolutionary relationships and there exists many algorithms for studying the sequence alignment. Scoring scheme in algorithm represent a set of rules that assigns the alignment score to any given alignment of two sequences. A gap in the matrix corresponds to an insertion or a deletion of a biological residue. Progressive alignment is one of the algorithms that is used for most of the tools For e.g. CLUSTAlW
+Multiple Sequence Alignment (MSA) represents the alignment of three or more biological sequences of similar length. It is useful in molecular biology to study evolutionary relationships and there exists many algorithms for studying the sequence alignment. Scoring scheme in algorithm represent a set of rules that assigns the alignment score to any given alignment of two sequences. A gap in the matrix corresponds to an insertion or a deletion of a biological residue. Progressive alignment is one of the algorithms that is used for most of the tools For e.g. CLUSTALW
+
+### Algorithms for Pylogenetic tree construction
+
+Phylogentic tree helps us to study the evolutionary relationships and there exists many algorithms and tools for constructing trees. Algorithms like Margoliasch-Fitch algorithm, Neighbor joining, UPGMA can be used. These algorithms are used in tools like Phylip, ggTree, Figtree etc..
+
+
 
