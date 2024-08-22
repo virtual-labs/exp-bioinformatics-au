@@ -10,7 +10,7 @@
         label {
             background-color: #802652;
             color: white;
-            padding: 10px;
+            padding: 1%;
             font-family: sans-serif;
             cursor: auto;
             margin-top: 200px;
@@ -18,23 +18,23 @@
             height:50px;
             border-radius:180px;
             position:relative;
-            font-size:16px;
+            font-size:1.5vw;
             line-height:12px;
         }
         span{
-            font-size: 14px;
+            font-size: 1.5vw;
             color: black;
         }
         input[type=button]{
             width: 20%;
             background-color: #75264d;
             color: white;
-            padding: 14px 20px;
+            padding: 1% 2%;
             margin: 8px 0;
             border: none;
             border-radius: 180px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 1.5vw;
         }
         .h{
             text-align: center;
@@ -50,11 +50,11 @@
             background-color: white;
             border: black;
             color: black;
-            font-size: 18px;
+            font-size: 2vw;
             
         }
         .at-item {
-		    color:rgb(181,3,70); font-weight:bold; font-size:45px;;
+		    color:rgb(181,3,70); font-weight:bold; font-size:4vw;
             justify-content: center;
 		    text-decoration-color:rgb(181,3,70);  
 		    position: relative;
@@ -70,13 +70,21 @@
             font-family: sans-serif;
             cursor: auto;
             margin-top: 0px;
-            width: 100px;
-            height:25px;
+            width: 10%;
+            height:5%;
             border-radius:180px;
             position:relative;
-            font-size:15px;
-            line-height:12px;
+            font-size:1.5vw;
+            line-height:20px;
         }
+        h3{
+            font-size: 1.5vw;
+            font-weight: lighter;
+            color: black;
+        }
+        h1{
+			font-size: 3vw;
+		}
         </style>
     <head>
         
@@ -87,30 +95,30 @@
 
     <body style="background-color:white">
         <div class='at-container'>
-            <img src="images/logo.png="300" height="100" style="margin-left:2%;">
+            <img src="images/logo.png"width="15%" height="1%" style="margin-left:2%;">
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div class='at-item' >Basic Algorithms in Bioinformatics </div>
         </div>
         <br>
         <form id="myform">
         <div style="background-color:#f0eaea;padding:15px;text-align:center;">
-            <div class='at-item' style="font-size:30px"><div class="h">Needleman-Wunsch Algorithm</div>
+            <div class='at-item' style="font-size:3vw"><div class="h">Needleman-Wunsch Algorithm</div>
             <br>
             <input type="file" id="btn1" accept=".txt"  ref="fileInput1" type="file"  onchange="getFileName1(myform.btn1)"hidden/>
             <span id="fileName1" ></span>
 
             <label for="btn1" style="cursor: pointer;">Upload a FASTA sequence</label> 
-            &nbsp;<i class="fa fa-hand-o-left" style="font-size:18px;color:black;" style="font-size: 18px;color:black;"> Click here to upload first FASTA file (maximum sequence length is 10bp)</i><br><br>
+            <br><i class="fa fa-hand-o-up" style="font-size:2vw;color:black;" style="font-size: 2vw;color:black;"> Click here to upload first FASTA file (maximum sequence length is 10bp)</i><br><br>
             
             <input type="file" id="btn2" accept=".txt"  ref="fileInput2" type="file"  onchange="getFileName2(myform.btn2)"hidden/>
             <span id="fileName2" ></span>&nbsp;
             <label for="btn2" style="cursor: pointer;">Upload a FASTA sequence to compare</label> 
-            &nbsp;<i class="fa fa-hand-o-left" style="font-size:18px;color:black;" style="font-size: 18px;color:black;"> Click here to upload second FASTA file (maximum sequence length is 10bp) </i><br><br>
+            <br><i class="fa fa-hand-o-up" style="font-size:2vw;color:black;" style="font-size: 2vw;color:black;"> Click here to upload second FASTA file (maximum sequence length is 10bp) </i><br><br>
         </div>
 
-        <a href="short.txt" download="sample_fasta.txt">Download a Sample FASTA file</a>&nbsp;&nbsp;
+        <a href="short.txt" download="sample_fasta.txt; "style="font-size: 2vw;">Download a Sample FASTA file</a>&nbsp;&nbsp;
             
-            <a href="Dengue virus 2 _short .txt" download="sample_fasta.txt">Download a Sample FASTA file to compare</a>
+            <a href="Dengue virus 2 _short .txt" download="sample_fasta.txt;"style="font-size: 2vw;">Download a Sample FASTA file to compare</a>
             <br><br>
         <input type="button" style="margin-left:5%;font-weight: bold;" value="Compare" onclick="bfc()" >
         <a href="index.html">
@@ -242,7 +250,7 @@
                     //document.getElementById("result").insertAdjacentHTML('beforeend',  dna_array2[n]+"<br>");
           
                 }
-                document.getElementById("result").insertAdjacentHTML('beforeend',  matrix[m]+"<br>");
+                document.getElementById("result").insertAdjacentHTML('beforeend',  "<h3>"+matrix[m]+"</h3>");
  
             }
             document.getElementById("result").insertAdjacentHTML('beforeend',  "<br><button type=\"button\" id=\"btn3\" onclick=fillmat()>Filled Matrix</button><br>");
@@ -307,13 +315,13 @@
 
                 }
                 //document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>");
-                document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>"+ matrix1[m]);
+                document.getElementById("result").insertAdjacentHTML('beforeend',  "<h3>"+ matrix1[m]+"</h3");
                 //document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>"+trace[m]+"<br>");   
             }
 
             //document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>"+trace);    
             //document.getElementById("result").insertAdjacentHTML('beforeend', " trace");
-            document.getElementById("result").insertAdjacentHTML('beforeend',  "<br><br><button type=\"button\" id=\"btn4\" onclick=traceback()>Trace Back</button><br>");
+            document.getElementById("result").insertAdjacentHTML('beforeend',  "<br><button type=\"button\" id=\"btn4\" onclick=traceback()>Trace Back</button><br>");
            return matrix1,trace;
 
         }
@@ -396,11 +404,11 @@
 
             for (var m=0; m<=len1; m++){
                 for(var n=0;n<=len2; n++){
-                    document.getElementById("result").insertAdjacentHTML('beforeend',  "["+trace[m][n]+"]"); 
+                    document.getElementById("result").insertAdjacentHTML('beforeend',  "<h3>["+trace[m][n]+"]</h3>"); 
                 }
                 document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>"); 
             }
-            document.getElementById("result").insertAdjacentHTML('beforeend',  "<br><br><button type=\"button\" id=\"btn5\" onclick=alig()>Alignment</button><br>");
+            document.getElementById("result").insertAdjacentHTML('beforeend',  "<br><button type=\"button\" id=\"btn5\" onclick=alig()>Alignment</button><br>");
 
             return X,Y;
         }
@@ -410,8 +418,8 @@
             var totalig=0;
             var rev_X=X.reverse();
             var rev_Y=Y.reverse();
-            document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>"+rev_X+"<br>"); 
-            document.getElementById("result").insertAdjacentHTML('beforeend',  rev_Y+"<br>");
+            document.getElementById("result").insertAdjacentHTML('beforeend',  "<h3>"+rev_X+"</h3>"); 
+            document.getElementById("result").insertAdjacentHTML('beforeend',  "<h3>"+rev_Y+"</h3>");
             for(var i=0;i<rev_X.length;i++)
             {
                 if(rev_X[i]===rev_Y[i])
@@ -437,7 +445,7 @@
                 }
             }
             
-            document.getElementById("result").insertAdjacentHTML('beforeend',  "<br>Alignment score:"+totalig+"<br>");
+            document.getElementById("result").insertAdjacentHTML('beforeend',  "<h3>Alignment score:"+totalig+"</h3><br>");
 
         }
         
