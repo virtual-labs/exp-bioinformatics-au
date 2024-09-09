@@ -12,15 +12,15 @@
         label {
             background-color: #802652;
             color: white;
-            padding: 1%;
+            padding: 0.8vw;
             font-family: sans-serif;
             cursor: auto;
             margin-top: 200px;
-            width: 1000px;
-            height:50px;
+            width: 600px;
+            height:25px;
             border-radius:180px;
             position:relative;
-            font-size:1.5vw;
+            font-size:0.8vw;
             line-height:12px;
         }
 
@@ -30,15 +30,15 @@
         }
 
         input[type=button]{
-            width: 20%;
+            width: 10%;
             background-color: #75264d;
             color: white;
-            padding: 1% 2%;
+            padding: 8%;
             margin: 8px 0;
             border: none;
             border-radius: 180px;
             cursor: pointer;
-            font-size: 1.5vw;
+            font-size: 0.8vw;
         }
 
         .h{
@@ -69,7 +69,7 @@
 	    }
 
         h1{
-			font-size: 3vw;
+			font-size: 1.5vwvw;
 		}
         
         h3{
@@ -93,22 +93,22 @@
         <br>
         <form id="myform">
             <div style="background-color:#f0eaea;padding:15px;text-align:center;">
-                <div class='at-item' style="font-size:3vw"><div class="h">Brute Force Comparison</div>
+                <div class='at-item' style="font-size:1.5vw"><div class="h">Brute Force Comparison</div>
                     <br>
                     <input type="file" id="btn1" accept=".txt"  ref="fileInput1" type="file"  onchange="getFileName1(myform.btn1)"hidden/>
                     <span id="fileName1" ></span>
 
                     <label for="btn1" style="cursor: pointer;">Upload a FASTA file:</label> 
-                    &nbsp;<i class="fa fa-hand-o-left" style="font-size:2vw;color:black;" style="font-size: 2vw;color:black;"> Click here to upload first FASTA file </i><br><br>
+                    &nbsp;<i class="fa fa-hand-o-left" style="font-size:1vw;color:black;" style="font-size: 1vw;color:black;"> Click here to upload first FASTA file </i><br><br>
                     
                     <input type="file" id="btn2" accept=".txt"  ref="fileInput2" type="file"  onchange="getFileName2(myform.btn2)"hidden/>
                     <span id="fileName2" ></span>&nbsp;
                     <label for="btn2" style="cursor: pointer;">Upload a FASTA file to compare:</label> 
-                    &nbsp;<i class="fa fa-hand-o-left" style="font-size:2vw;color:black;" style="font-size: 2vw;color:black;"> Click here to upload second FASTA file </i><br><br>
+                    &nbsp;<i class="fa fa-hand-o-left" style="font-size:1vw;color:black;" style="font-size: 1vw;color:black;"> Click here to upload second FASTA file </i><br><br>
                 </div>
                
                 <a href="Dengue virus 2 gene_fasta.txt" download="sample_fasta.txt;"style="font-size: 2vw;">Download a Sample FASTA file</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="monkey.txt" download="sample_fasta.txt;"style="font-size: 2vw;">Download a Sample FASTA file to compare</a>
+                <a href="monkey.txt" download="sample_fasta.txt;"style="font-size: 1vw;">Download a Sample FASTA file to compare</a>
                 <br><br>
                 <input type="button" style="margin-left:5%;font-weight: bold;" value="Compare" onclick="bfc()" >
                 <a href="index.html">
@@ -173,10 +173,10 @@
             document.getElementById("demo").innerHTML =("<h1 style=\"color:rgb(181,3,70)\"> Results</h1>"+"\n");
             //document.getElementById("demo").innerHTML = dna1;
             if(dna1==dna2){
-                document.getElementById("result").innerHTML= "<h1 style=\"color:rgb(0,200,20)\" \"font-size:24px\"><b>The DNA sequences are a perfect match\n";
+                document.getElementById("result").innerHTML= "<h1 style=\"color:rgb(0,200,20)\" \"font-size:1 vw\"><b>The DNA sequences are a perfect match\n";
             }
             else{
-                document.getElementById("result").innerHTML= "<h1 style=\"color:rgb(200,0,0)\" \"font-size:24px\"><b>The DNA sequences does not match\n";
+                document.getElementById("result").innerHTML= "<h1 style=\"color:rgb(200,0,0)\" \"font-size:1vw\"><b>The DNA sequences does not match\n";
             }
         }
     </script>
