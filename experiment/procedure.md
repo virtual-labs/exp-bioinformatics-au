@@ -17,7 +17,7 @@ The basic bioinformatics user interface helps users learn the essential algorith
   <br>
   <img src="images/p5.png" title="" />
   
-      i.	The user could see a new page for Brute Force Algorithm with a “Back” button to go to the previous menu.  Now click on “Upload the FASTA file” and load the nucleotide/ amino acid file in FASTA format
+  i.	The user could see a new page for Brute Force Algorithm with a “Back” button to go to the previous menu.  Now click on “Upload the FASTA file” and load the nucleotide/ amino acid file in FASTA format
       
       <img src="images/p6.png" title="" />
       <br>
